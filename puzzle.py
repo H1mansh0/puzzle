@@ -38,4 +38,6 @@ def validate_board(board: list) -> bool:
     ])
     True
     """
-    return gorizontal_checking(board) and transformer(board) and blockchecker(board)
+    if isinstance(board, list):
+        return gorizontal_checking(board) and transformer(board) and blockchecker(board)
+    return False
